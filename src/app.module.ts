@@ -4,6 +4,7 @@ import {
   ApolloFederationDriver,
   ApolloFederationDriverConfig,
 } from '@nestjs/apollo';
+import { LessonModule } from './lesson/lesson.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import {
       driver: ApolloFederationDriver,
       autoSchemaFile: true,
     }),
+    LessonModule,
   ],
 })
 export class AppModule {}
